@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+	<script type="text/javascript">
+			function pop(div) {
+				document.getElementById(div).style.display = 'block';
+			}
+			function hide(div) {
+				document.getElementById(div).style.display = 'none';
+			}
+			function popSignup(div,div2){
+				document.getElementById(div).style.display = 'block';
+				document.getElementById(div2).style.display = 'none';
+			}
+			//To detect escape button
+			document.onkeydown = function(evt) {
+				evt = evt || window.event;
+				if (evt.keyCode == 27) {
+					hide('popDiv');
+				}
+			};
+			function VALIDATE()                                    
+{ 
+    var fname = document.getElementById("firstname");              
+    var lname = document.getElementById("lastname");    
+    var email = document.getElementById("email");
+    var pass = document.getElementById("password");
+    var fpass = document.getElementById("confirmpassword");  
+   
+    if (fname.value == "")                                  
+    { 
+        window.alert("Please enter your first name."); 
+        name.focus(); 
+        return false; 
+    } 
+   
+    else if (lname.value == "")                               
+    { 
+        window.alert("Please enter your last name."); 
+        name.focus(); 
+        return false; 
+    } 
+       
+    else if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+    else if (pass.value == "")                                   
+    { 
+        window.alert("Please enter a password"); 
+        email.focus(); 
+        return false; 
+    } 
+    else if (fpass.value != pass.value)                                   
+    { 
+        window.alert("Please confirm your password"); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    else if (email.value.indexOf("@", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+   
+    else if (email.value.indexOf(".", 0) < 0)                 
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+    else{
+    	document.getElementById("popDiv").style.display = 'none';
+    	return true; 
+    }
+}
+		</script>
+	<style type="text/css">
+		html, body {
+			height: 100%;
+			background-color: #f5f7fb;
+		}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6c6d74; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6c6d74; 
+}
+.ontop {
+				display: none;			
+			}
+			#popup {
+				width: 300px;
+				height: 200px;
+				position: absolute;
+				color: #000000;
+				background-color: #ffffff;
+				/* To align popup window at the center of screen*/
+				top: 50%;
+				left: 50%;
+				margin-top: -100px;
+				margin-left: -150px;
+			}
+	</style>
+</head>
+<body style="background-color: #f5f7fb;overflow: auto;position: relative;">
+	<img src="filter_icon.png" style="width: 20px;height: 20px;margin-top: 10px;padding: 5px;background-color: #d4547f;margin-left: 20px;float: left;">
+	<div style="margin-top: 10px;width: 80%;margin-left: 65px;height: 40px;">
+		<p style="height: 25px;width: 250px; margin-top: 7px;margin-right: 20px;margin-left: 20px;color: #c1c1c1;font-size: 15px;padding-left: 10px;background-color: #ffffff;padding-top: 5px;	box-shadow: 0 0.1px 0.2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);float: left;">Tags(tcf tcf tcf tcf tcf)</p>
+		<select style="height: 29px;width: 200px; margin-top: 9px;margin-right: 20px;margin-left: 20px;color: #c1c1c1;font-size: 14px;padding-left: 10px;background-color: #ffffff;padding-top: 5px;box-shadow: 0 0.1px 0px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);float: left;border: 0px solid #00000000;">
+			<option>TCF Feed</option>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+		</select>
+		<select style="height: 29px;width: 200px; margin-top: 9px;margin-right: 20px;margin-left: 20px;color: #c1c1c1;font-size: 14px;padding-left: 10px;background-color: #ffffff;padding-top: 5px;box-shadow: 0 0.1px 0px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);float: left;border: 0px solid #00000000;">
+			<option>TCF Feed</option>
+			<option>Option 1</option>
+			<option>Option 2</option>
+			<option>Option 3</option>
+		</select>
+	</div>
+	<div style="float: right;width: 200px;height: 30px;background-color: #f5eeee;margin-right: 20px;margin-top: -34px;">
+		<p style="font-size: 16px;color: #7b7574;margin-top: 5px;margin-left: 10px;"><a href="#" onclick="pop('popDivSignin')"> SIGN IN</a></p>
+	</div>
+	<br>
+	<div style="float: left;width: 71%;height: 89%;min-width: 100px;border-top: 1px solid #eef0f4;overflow: auto;">
+		<div style="height: 200px;width: 95%;background-color: #f5f5f5;margin-top: 10px;margin-bottom: 10px;margin-left: 20px;margin-right: 20px;border: 1.5px solid #9e9fa0;background-color: #ffffff;">
+		<img src="scenerysac.jpg" style="border-radius: 50%;float: left;margin-top: 10px;margin-left: 15px;height: 60px;width: 60px;">
+		<p id="title" style="font-size: 30px;float: left;margin-left: 25px;margin-top: 13px;">A Loving Nature Is A Truest Wisdom</p>
+		<textarea id="date" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;margin-top: 48px;margin-left: -450px;font-family: aerial;">14th October 2019</textarea>
+		<textarea id="author" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;font-family: aerial;">Rakesh Kumar</textarea>
+		<textarea id="domain" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;font-family: aerial;">#nature</textarea>
+		<p style="font-size: 15px;margin-left: 15px;">Take a moment to close your eyes and consider the sights,sounds and smells that you imagine<br>when you think about being in nature. Perhaps you see a tiny trail meander through a dense<br>forest or smell blossoming wild flowers as you summit a mountain peak.</p>
+		<a href="" style="margin-left: 15px;color: blue;text-decoration: none;"><strong>Read More >></strong></a>
+	</div>
+	<div style="height: 200px;background-color: #ffffff;border: 1.5px solid #9e9fa0;width: 95%;margin-top: 10px;margin-bottom: 10px;margin-left: 20px;margin-right: 20px;">
+		<img src="androidsac.png" style="border-radius: 50%;float: left;margin-top: 10px;margin-left: 15px;height: 60px;width: 60px;">
+		<p id="title" style="font-size: 25px;float: left;margin-left: 25px;margin-top: 13px;">Build A Simple Blog App With Firebase In<br>Android Studio</p>
+		<textarea id="date" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;margin-top: 70px;margin-left: -435px;font-family: aerial;">14th October 2019</textarea>
+		<textarea id="author" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;font-family: aerial;">Atul Kumar</textarea>
+		<textarea id="domain" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;font-family: aerial;">#appdevelopment</textarea>
+		<p style="font-size: 15px;margin-left: 15px;margin-top: 8px;">Firebase is a Backend-as-a-Service that started as a YC11 startup and grew up into<br>a next generation app development platform on Google Cloud Platform.</p>
+		<a href="" style="margin-left: 15px;color: blue;text-decoration: none;"><strong>Read More >></strong></a>
+	</div>
+	<div style="height: 200px;width: 95%;background-color: #ffffff;border: 1.5px solid #9e9fa0;margin-top: 10px;margin-bottom: 10px;margin-left: 20px;margin-right: 20px;">
+		<img src="webflowsac.png" style="border-radius: 50%;float: left;margin-top: 10px;margin-left: 15px;height: 60px;width: 60px;">
+		<p id="title" style="font-size: 30px;float: left;margin-left: 25px;margin-top: 13px;">The Absolute Beginners Guide To WebFlow</p>
+		<textarea id="date" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;margin-top: 48px;margin-left: -535px;font-family: aerial;">14th October 2019</textarea>
+		<textarea id="author" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;font-family: aerial;">Man Raj Sunderam</textarea>
+		<textarea id="domain" disabled style="background-color: #ffffff;font-size: 15px;color: black;height: 30px;width: 15%;border-color: #00000000;resize: none;font-family: aerial;">#webdesign</textarea>
+		<p style="font-size: 15px;margin-left: 15px;margin-top:20px;">In short WebFlow is a web design tool,CMS and hosting platform. Each aspect of the platform<br>is represented by a particular product/feature set______</p>
+		<a href="" style="margin-left: 15px;color: blue;text-decoration: none;"><strong>Read More >></strong></a>
+	</div>
+	</div>
+	<div style="float: right;width: 25%;min-width: 100px;background-color: #ffffff;height: 60%;border: 1.5px solid #bbbcbe;margin-right: 20px;background-color: #ffffff;overflow: auto;">
+		<p style="width: 100%;height: 50px;text-align: center;font-size: 20px;margin-top: 0px;color: #ffffff;font-style: bold;background-color: #2c292a;padding-top: 20px;">SAC NOTICE BOARD</p>
+		<div style="width: 90%;height: 90px;margin-top: 10px;margin-bottom: 30px;margin-left: 15px;background-color: #ffffff;border: 1.5px solid #a09b9c;border-radius: 15px;box-shadow: 0 0.1px 0px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+			<p style="color: #343436;width: 100%;font-size: 12px;text-align: left;margin-top: 5px;margin-left: 10px;">RAKESH KUMAR</p>
+			<div style="width: 97%;height: 1px;background-color: #6f6f70;margin-left: 4px;margin-right: 4px;margin-top: -4px;"></div>
+			<textarea id="heading" disabled style="font-size: 12px;color: #4c4c4c;height: 14px;width: 90%;border-color: #00000000;resize: none;font-family: aerial;background-color: #ffffff;margin-top: 4px;margin-left: 10px;">#tcf2K18</textarea>
+			<textarea id="content" disabled style="font-size: 12px;color: #4c4c4c;height: 14px;width: 90%;border-color: #00000000;resize: none;font-family: aerial;background-color: #ffffff;margin-top: -5px;margin-left: 10px;">This is the content of notice board</textarea>
+			<p style="color: #54529d;font-size: 10px;margin-top: -5px;margin-left: 15px;" id="read_more">read more</p>
+		</div>
+		<div style="width: 90%;height: 90px;margin-top: 10px;margin-bottom: 30px;margin-left: 15px;background-color: #ffffff;border: 1.5px solid #a09b9c;border-radius: 15px;box-shadow: 0 0.1px 0px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+			<p style="color: #343436;width: 100%;font-size: 12px;text-align: left;margin-top: 5px;margin-left: 10px;">RAKESH KUMAR</p>
+			<div style="width: 97%;height: 1px;background-color: #6f6f70;margin-left: 4px;margin-right: 4px;margin-top: -4px;"></div>
+			<textarea id="heading" disabled style="font-size: 12px;color: #4c4c4c;height: 14px;width: 90%;border-color: #00000000;resize: none;font-family: aerial;background-color: #ffffff;margin-top: 4px;margin-left: 10px;">#tcf2K18</textarea>
+			<textarea id="content" disabled style="font-size: 12px;color: #4c4c4c;height: 14px;width: 90%;border-color: #00000000;resize: none;font-family: aerial;background-color: #ffffff;margin-top: -5px;margin-left: 10px;">This is the content of notice board</textarea>
+			<p style="color: #54529d;font-size: 10px;margin-top: -5px;margin-left: 15px;" id="read_more">read more</p>
+		</div>
+		<div style="width: 90%;height: 90px;margin-top: 10px;margin-bottom: 30px;margin-left: 15px;background-color: #ffffff;border: 1.5px solid #a09b9c;border-radius: 15px;box-shadow: 0 0.1px 0px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);">
+			<p style="color: #343436;width: 100%;font-size: 12px;text-align: left;margin-top: 5px;margin-left: 10px;">RAKESH KUMAR</p>
+			<div style="width: 97%;height: 1px;background-color: #6f6f70;margin-left: 4px;margin-right: 4px;margin-top: -4px;"></div>
+			<textarea id="heading" disabled style="font-size: 12px;color: #4c4c4c;height: 14px;width: 90%;border-color: #00000000;resize: none;font-family: aerial;background-color: #ffffff;margin-top: 4px;margin-left: 10px;">#tcf2K18</textarea>
+			<textarea id="content" disabled style="font-size: 12px;color: #4c4c4c;height: 14px;width: 90%;border-color: #00000000;resize: none;font-family: aerial;background-color: #ffffff;margin-top: -5px;margin-left: 10px;">This is the content of notice board</textarea>
+			<p style="color: #54529d;font-size: 10px;margin-top: -5px;margin-left: 15px;" id="read_more">read more</p>
+		</div>
+	</div>
+	<div style="float: right;background-color: #ffffff;width: 25%;min-width: 100px;height: 28%;margin-top: 15px;margin-right: 20px;border: 2px solid #bbbcbe;border-radius: 20px;">
+		<p style="width: 100%;text-align: center;height: 20px;font-size: 18px;color: #4c4c4c;margin-top: 6px;">Like Us And Follow</p>
+		<div style="width: 97%;height: 1px;background-color: #6f6f70;margin-left: 4px;margin-right: 4px;margin-top: -4px;"></div>
+		<br><br>
+		<center>
+		<img src="facebook_image_link.png" id="facebook_link" style="width: 40px;height: 40px;margin-right: 10px;border-radius: 40px;padding: 8px;background-color: #2b2725;">
+		<img src="twitter_image_link.jpg" id="twitter_link" style="width: 40px;height: 40px;margin-right: 10px;margin-left: 10px;border-radius: 40px;padding: 8px;background-color: #2b2725;">
+		<img src="instagram_image_link.jpg" id="instagem_link" style="width: 40px;height: 40px;margin-left: 10px;border-radius: 40px;padding: 8px;background-color: #2b2725;">
+		</center>
+	</div>
+<center><div  id="popDivSignin" class="ontop" style="position: absolute;top: 50%;transform: translateY(-50%);background-color: #ffffff;height: 500px;width: 400px;background-color: #efefef;margin-left: 23%;">
+		<p style="font-size: 30px;color: black;float: left;margin-top: 10px;margin-left: 25px;">LOGIN</p>
+		<img src="crosssac.jpg" style="float: right;margin-top: 8px;margin-right: 10px;height: 40px;width: 40px;background-color: #efefef" onClick="hide('popDivSignin')">
+		<p style="font-size: 25px;margin-left: -100px;margin-top: 150px;float: left"><strong>Email Address</strong></p><br>
+		<input type="text" name="email" style="width: 88%;height: 30px;padding-left: 5px;background-color: white;color: black;margin-left: 18px;margin-top: -30px;" placeholder="Enter email">
+		<p style="font-size: 25px;margin-left: 20px"><strong>Password</strong></p>
+		<input type="password" name="password" style="width: 88%;height: 30px;padding-left: 5px;background-color: white;color: black;margin-left: 18px;margin-top: -30px;" placeholder="Enter Password">
+		<center><button style="font-size: 25px;height: 50px;width: 55%;color: #f6f7fb;border-radius: 30px;background-color: #3d3e43;margin-top: 40px;">Login</button></center>
+		<center><p style="font-size: 15px;margin-top: 25px;"><strong>Dont't have an account? <a href="#" onClick="popSignup('popDiv','popDivSignin')" style="text-decoration: none;color: blue;">Signup here</a></strong></p></center>
+	</div></center>
+	<center>
+		<div id="popDiv" class="ontop" name="signup" style="position: absolute;top: 50%;transform: translateY(-50%);background-color: #ffffff;height: 500px;width: 510px;margin-left: 23%;overflow: auto;background-color: #f6f7fc;">
+			<div style="width: 99%;height: 60px;border: 1px solid black;background-color: white;">
+				<p style="font-size: 30px;color: black;float: left;margin-top: 15px;margin-left: 15px;">Signup</p>
+				<img src="crosssac.jpg" style="float: right;margin-top: 8px;margin-right: 10px;height: 45px;width: 45px;background-color: #efefef" onClick="hide('popDiv')">
+			</div>
+			<input type="text" id="firstname" name="firstname" placeholder="First Name" style="margin-left: -80px;margin-top: 70px;padding-left: 10px;font-size: 25px;border-radius: 10px;height: 50px;width: 40%;background-color: white;color: black;">
+			<input type="text" id="lastname" name="lastname" placeholder="Last Name" style="margin-left: 20px;padding-left: 10px;margin-top: 70px;font-size: 25px;border-radius: 10px;height: 50px;width: 40%;background-color: white;color: black;">
+			<input type="email" id="email" name="email" placeholder="Enter Email" style="margin-left: 20px;padding-left: 10px;margin-top: 30px;font-size: 25px;border-radius: 10px;height: 50px;width: 88%;background-color: white;color: black;">
+			<input type="password" id="password" name="password" placeholder="Enter Password`" style="margin-left: 20px;padding-left: 10px;margin-top: 30px;font-size: 25px;border-radius: 10px;height: 50px;width: 88%;background-color: white;color: black;">
+			<input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" style="margin-left: 20px;padding-left: 10px;margin-top: 30px;font-size: 25px;border-radius: 10px;height: 50px;width: 88%;background-color: white;color: black;">
+			<center><button style="font-size: 25px;height: 50px;width: 40%;color: #f6f7fb;border-radius: 30px;background-color: #3d3e43;margin-top: 40px;" onclick="javascript:VALIDATE()">Register</button></center>
+			<center><p style="font-size: 25px;color: black;margin-top: 10px;"><strong>OR</strong></p></center>
+			<center><div style="width: 80%;height: 0px;border: 1px solid black;margin-top: -5px"></div></center>
+			<center><img src="signupgooglesac.jpg" style="margin-top: 5px;height: 90px;width: 50%;"></center>
+			<center><p style="font-size: 15px;margin-top: -10px;"><strong>Already have an account? <a href="" style="text-decoration: none;color: blue;">Login</a></strong></p></center>
+		</div>
+	</center>
+</body>
+</html>

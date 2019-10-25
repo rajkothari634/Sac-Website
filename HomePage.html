@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
 	<style type="text/css" >
 		*{
 			padding: 0px;
 			margin: 0px;
 		}
+		
+
+			
 		html, body {
 			height: 100%;
 			background-color: #f5f7fb;
 		}
+		::placeholder {
+  color: #ffffff;
+  text-align: right;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #ffffff;
+ text-align: right;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: #ffffff;
+ text-align: right;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6c6d74; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6c6d74; 
+}
+
 	</style>
 	<title>SAC HOMEPAGE</title>
 </head>
 <body>
-	<div id="div_search_blogs" style="width: 100%;height: 10%;background-color: #3c3e44;">
-		
+	<div id="div_search_blogs" style="width: 100%;height: 10%;background-color: #3c3e44;min-height: 60px;position: relative;">
+		<div id="div_search" style="position: absolute; top: 50%;-ms-transform: translateY(-50%);transform: translateY(-50%);height: 35px;margin-left: 16%;padding-left: 10px;width: 35%;min-width: 100px;background-color: #403f46;		box-shadow: 0 0.2px 0.8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+			<input type="text" name="search" id="search_bar" style="font-size: 16px;border: 0px solid #00000000;padding-left: 10px;height: 25px;width: 80%;min-width: 60px;background-color: #403f46;color: #ffffff;margin-top: 5px;float: left;padding-right: 10px;" placeholder="Search">
+			<img src="search_icon_image.png" id="search_icon" style="width: 25px;height: 25px; margin-left: 10px; margin-top: 5px;">
+		</div>
+		<div id="writing_blog" style="position: absolute; top: 20%;right: 10px;background-color: #6c6d74;width: 15%;min-width: 80px;height: 40px;float: right;margin-right: 20px;color:#ffffff;min-width: 200px;">
+			<img src="write_blog_icon_image.jpg" style="width: 25px;height: 25px;margin-top: 7.5px;margin-left: 10px;font-size: 20px;">
+			<p style="width: 100px;height: 25px;font-size: 20px;margin-left: 55px;margin-top: -27px;">Write Blog</p>
+		</div>
 	</div>
-	<div id="div_nav_bar" style="width: 15%;border-top-right-radius: 30px;height: 102%;margin-top: -5%;border-bottom-right-radius: 30px;background-color: #1a1818;float: left;">
+
+	<div id="div_nav_bar" style="position: absolute;width: 15%;border-top-right-radius: 30px;height: 100%;margin-top: -70px;border-bottom-right-radius: 30px;background-color: #1a1818;float: left;min-height: 560px;">
+
+		<p style="color: #cdcbcc;font-size: 22px;text-align: center;margin-top: 20px;">SAC NIT PATNA</p>
+		<div id="homediv" class="navdivs" style="background-color: #f5f7fb;color: black;float: right;width: 200px;height: 40px;margin-top: 24px;border-top-left-radius: 30px;border-bottom-left-radius: 30px;">
+			<img id="homeimg" src="nitplogo.png" style="height: 30px;width: 30px;float: left;padding-left: 10px;margin-top: 5px;">
+			<p id="homepar" style="float: left;margin-left: 15px;font-size: 15px;margin-top: 10px;">HOME</p>
+		</div>
+		<div id="sasdiv" class="navdivs" style="background-color: #f5f7fb;color: #676566;float: right;width: 200px;height: 40px;">
+			<img id="sasimg" src="black.png" style="height: 38px;width: 37px;float: left;padding-left: 10px;padding-top: 2px;opacity: 1;background-color: #1a1818;">
+			<p id="saspar" style="float: left;font-size: 12px;height: 26px;width: 143px;background-color: #1a1818;padding-top: 14px;padding-left: 9px;border-top-right-radius: 30px;">SAS COUNCIL 2019</p>
+		</div>
+		<div id="sasdiv" class="navdivs" style="background-color: #1a1818;color: #676566;float: right;width: 200px;height: 40px;">
+			<img id="sasimg" src="" style="height: 37px;width: 37px;float: left;padding-left: 10px;padding-top: 2px;opacity: 0;">
+			<p id="saspar" style="float: left;font-size: 12px;height: 25.8px;width: 143px;background-color: #1a1818;padding-top: 14px;padding-left: 10px;">NIT PATNA CLUBS</p>
+		</div>
+		<div id="sasdiv" class="navdivs" style="background-color: #1a1818;color: #676566;float: right;width: 200px;height: 40px;">
+			<img id="sasimg" src="" style="height: 37px;width: 37px;float: left;padding-left: 10px;padding-top: 2px;opacity: 0;">
+			<p id="saspar" style="float: left;font-size: 12px;height: 25.8px;width: 143px;background-color: #1a1818;padding-top: 14px;padding-left: 10px;">ABOUT SAC</p>
+		</div>
+		<div id="sasdiv" class="navdivs" style="background-color: #1a1818;color: #676566;float: right;width: 200px;height: 40px;">
+			<img id="sasimg" src="" style="height: 37px;width: 37px;float: left;padding-left: 10px;padding-top: 2px;opacity: 0;">
+			<p id="saspar" style="float: left;font-size: 12px;height: 25.8px;width: 143px;background-color: #1a1818;padding-top: 14px;padding-left: 10px;">NIT MAP</p>
+		</div>
+		<div id="sasdiv" class="navdivs" style="background-color: #1a1818;color: #676566;float: right;width: 200px;height: 40px;">
+			<img id="sasimg" src="" style="height: 37px;width: 37px;float: left;padding-left: 10px;padding-top: 2px;opacity: 0;">
+			<p id="saspar" style="float: left;font-size: 12px;height: 25.8px;width: 143px;background-color: #1a1818;padding-top: 14px;padding-left: 10px;">ABOUT TCF</p>
+		</div>
+		<div id="sasdiv" class="navdivs" style="background-color: #1a1818;color: #676566;float: right;width: 200px;height: 40px;">
+			<img id="sasimg" src="" style="height: 37px;width: 37px;float: left;padding-left: 10px;padding-top: 2px;opacity: 0;">
+			<p id="saspar" style="float: left;font-size: 12px;height: 25.8px;width: 143px;background-color: #1a1818;padding-top: 14px;padding-left: 10px;">SIGN OUT</p>
+		</div>
 	</div>
 	
-	<iframe src=""  style="width: 84.7%;height: 91%;border: 0px solid #00000000;float: right;background-color: #f5f7fb;">
+	<iframe src="homeinside.html"  style="width: 84.7%;height: 89%;border: 0px solid #00000000;float: right;background-color: #f5f7fb;min-height: 500px;">
 		
 	</iframe>
 
 </body>
+</html>
