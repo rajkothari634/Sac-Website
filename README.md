@@ -1,2 +1,2 @@
 # Sac-Website
-homepage for competition fro sac webpage
+homepage for competition of sac webpage
